@@ -1,0 +1,98 @@
+<app-loader></app-loader>
+
+<div class="main-container" [ngStyle]="{'background-image': background}">
+    <header>
+        <a [routerLink]="[ '']">
+            <div class="nda-container">
+                <img src="/assets/images/NDA-white.svg" alt="NDA-icon">
+            </div>
+        </a>
+
+        <p class="text-header">that makes binging healthy for you that is not only authentic but also tasty</p>
+
+        <div class="search">
+            <input type="text" placeholder="You can search by ingridients or product name">
+            <img src="/assets/images/Vector.svg" alt="">
+        </div>
+
+        <div class="menu-container">
+            <img class="menu-icon" src="/assets/images/menu.svg" alt="menu-icon">
+        </div>
+        <div class="profile-container"><img class="profile-icon" src="/assets/images/profile.svg" alt="profile-icon">
+        </div>
+        <div class="shopping-container"><img class="shopping-icon" src="/assets/images/shopping-bag.svg"
+                alt="shopping-icon"></div>
+
+    </header>
+
+    <div class="search-ipad">
+        <input type="text" placeholder="You can search by ingridients or product name">
+                    <img src="/assets/images/Vector.svg" alt="">
+    </div>
+
+    <section class="section1">
+        <p class="navigation">home/cookies/<span class="gray-color">{{product.name.toLowerCase()}} -
+                {{product.weight.toUpperCase()}}</span></p>
+        <div class="about-container">
+            <img class="product-img" [src]="product.image" alt="product image">
+            <div class="description">
+                <h1>{{product.title}}</h1>
+                <p>{{product.description}}</p>
+            </div>
+            <div class="images">
+                <!-- zeroSugar lowCalories allNatural -->
+                <div class="image-container1" *ngIf="product.zeroSugar">
+                    <img src="/assets/images/Vector-1.svg" alt="low calories">
+                    <p class="text">Low Calories</p>
+                </div>
+
+                <div class="image-container2" *ngIf="product.lowCalories">
+                    <img src="/assets/images/Vector-2.svg" alt="zero sugar">
+                    <p class="text">Zero Sugar</p>
+                </div>
+
+                <div class="image-container3" *ngIf="product.allNatural">
+                    <img src="/assets/images/21-Leaf.svg" alt="all natural">
+                    <p class="text">All Natural</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="price">
+        {{product.name}} - {{product.weight.toUpperCase()}}
+        <div class="price-box">
+            <p class="new-price">{{product.price}}</p>
+            <p class="old-price">{{product.oldPrice}}</p>
+        </div>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+<footer>
+    <div class="footer-container">
+        <div class="nda-container">
+            <img src="/assets/images/NDA-white.svg" alt="NDA-icon">
+        </div>
+
+        <div class="right-footer">
+            <div class="right-footer1">
+                <p class="footer-text">cookies</p>
+                <p class="footer-text">candies</p>
+                <p class="footer-text">dishes</p>
+            </div>
+            <div class="right-footer2">
+                <p class="footer-text">about us</p>
+                <p class="footer-text">contacts</p>
+                <p class="footer-text">delivery</p>
+            </div>
+            <div class="right-footer3">
+                <p class="footer-text">privacy policy</p>
+                <p class="footer-text">terms of use</p>
+            </div>
+            <div>
+                <p class="footer-text social-media-text">instagram</p>
+                <p class="footer-text social-media-text">meta</p>
+            </div>
+        </div>
+    </div>
+</footer>

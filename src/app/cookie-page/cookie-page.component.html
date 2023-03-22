@@ -1,158 +1,50 @@
 <app-loader></app-loader>
 <div class="main-container">
     <header>
-        <div class="nda-container">
-            <img src="/assets/images/NDA.svg" alt="NDA-icon">
-        </div>
+        <a [routerLink]="[ '']">
+            <div class="nda-container">
+                <img src="/assets/images/NDA-white.svg" alt="NDA-icon">
+            </div>
+        </a>
 
         <p class="text-header">that makes binging healthy for you that is not only authentic but also tasty</p>
 
         <div class="search">
             <input type="text" placeholder="You can search by ingridients or product name">
-            <img src="/assets/images/Vector.svg" alt="">
+            <img src="/assets/images/Vector-black.svg" alt="">
         </div>
 
         <div class="menu-container">
-            <img class="menu-icon" src="/assets/images/menu.svg" alt="menu-icon">
+            <img class="menu-icon" src="/assets/images/menu-black.svg" alt="menu-icon">
         </div>
-        <div class="profile-container">
-            <img class="profile-icon" src="/assets/images/profile.svg" alt="profile-icon">
+
+        <div class="profile-container"><img class="profile-icon" src="/assets/images/profile-black.svg"
+                alt="profile-icon">
         </div>
-        <div class="shopping-container">
-            <img class="shopping-icon" src="/assets/images/shopping-bag.svg" alt="shopping-icon">
-        </div>
+        <div class="shopping-container"><img class="shopping-icon" src="/assets/images/shopping-bag-black.svg"
+                alt="shopping-icon"></div>
+
     </header>
+
     <div class="search-ipad">
         <input type="text" placeholder="You can search by ingridients or product name">
-        <img src="/assets/images/Vector.svg" alt="">
+        <img src="/assets/images/Vector-black.svg" alt="">
     </div>
 
-
-
     <section class="section1">
-        <div class="banner1-container">
-            <img class="banner1" src="/assets/images/Frame-21.png" alt="banner1 icon">
-            <p class="banner1-text">BROWNIE</p>
-        </div>
-        <div class="banner2-container banner">
-            <img class="banner2" src="/assets/images/blue.png" alt="banner2 icon">
-            <p class="banner2-text">ALMOND</p>
-        </div>
-        <div class="banner3-container banner">
-            <img class="banner3" src="/assets/images/purple.png" alt="banner3 icon">
-            <p class="banner3-text">GINGER SNAP</p>
-        </div>
-        <div class="banner4-container banner">
-            <img class="banner4" src="/assets/images/green.png" alt="banner4 icon">
-            <p class="banner4-text">RAGI</p>
-        </div>
-        <div class="banner5-container banner">
-            <img class="banner5" src="/assets/images/white.png" alt="banner5 icon">
-            <p class="banner5-text">OATMEAL</p>
-        </div>
-        <div class="banner6-container banner">
-            <img class="banner6" src="/assets/images/pink.png" alt="banner6 icon">
-            <p class="banner6-text">BETEL</p>
-        </div>
-
-        <div class="banner1-container">
-            <img class="banner1" src="/assets/images/Frame-21.png" alt="banner1 icon">
-            <p class="banner1-text">BROWNIE</p>
-        </div>
-        <div class="banner2-container">
-            <img class="banner2" src="/assets/images/blue.png" alt="banner2 icon">
-            <p class="banner2-text">ALMOND</p>
-        </div>
-        <div class="banner3-container">
-            <img class="banner3" src="/assets/images/purple.png" alt="banner3 icon">
-            <p class="banner3-text">GINGER SNAP</p>
-        </div>
-        <div class="banner4-container">
-            <img class="banner4" src="/assets/images/green.png" alt="banner4 icon">
-            <p class="banner4-text">RAGI</p>
-        </div>
-        <div class="banner5-container">
-            <img class="banner5" src="/assets/images/white.png" alt="banner5 icon">
-            <p class="banner5-text">OATMEAL</p>
-        </div>
-        <div class="banner6-container">
-            <img class="banner6" src="/assets/images/pink.png" alt="banner6 icon">
-            <p class="banner6-text">BETEL</p>
+        <p class="section1-text1"><span class="part1-text1">home</span>/cookies</p>
+        <div class="section1-background-container">
+            <div class="black"></div>
+            <h1 class="section1-text2">cookie</h1>
+            <p class="section1-text3">Eating healthy isn't about depriving yourself, but rather making better choices to
+                keep your body energized, satisfied, and full.</p>
         </div>
     </section>
+
     <section class="section2">
-        <div class="left" (mousemove)="mouseEnter($event)">
-            <p class="left-text">unique, tasty healthy, and without any chemicals and preservatives.</p>
-            <a class="cokie-container" [routerLink]="[ '/aboutcandy']">
-                <div class="left-product" (mouseover)="mouseOver()" (mouseout)="mouseLeave()">
-                    <img src="/assets/images/Group 194.png" alt="3product-icon">
-                </div>
-                <p class="description-text">CANDIES</p>
-            </a>
-
-        </div>
-        <button class="buy-btn cursor buy-btn2">Go shop</button>
-
-        <div class="right" (mousemove)="mouseEnter($event)">
-            <a class="cokie-container" [routerLink]="[ '/aboutcookie']">
-                <p class="text-right text-up">Natural food company from Berlin, Germany.</p>
-                <p class="text-right">Delicious and simply nutritious with nothing artificial added.</p>
-                <img class="icon" src="/assets/images/Frame-6.svg" alt="icons">
-                <div class="right-product" (mouseover)="mouseOver()" (mouseout)="mouseLeave()">
-                    <img src="/assets/images/Group-195.svg" alt="products">
-                </div>
-                <p class="description-text">COOKIES</p>
-            </a>
-        </div>
-        <button class="buy-btn cursor">Go shop</button>
-    </section>
-    <section class="section3" (mousemove)="mouseEnter($event)">
-        <div class="background-container" (mouseover)="mouseOver()" (mouseout)="mouseLeave()">
-            <img class="section3-background" src="/assets/images/image-95.png" alt="background">
-        </div>
-
-        <p class="description-text">DISHES</p>
-    </section>
-
-    <section class="section4">
-        <div class="left-right-text-container">
-            <div class="left">
-                <p class="left-text">suit your taste and nutritional demands</p>
-
-            </div>
-            <div class="right">
-                <p class="text-top-right">We offer to you </p>
-                <p class="text-bottom-right">a product that makes binging healthy for you
-                    a product that is not only authentic but also tasty</p>
-            </div>
-        </div>
-
-        <div class="demand-container">
-            <div class="demand1">
-                <img class="leaf-icon" src="/assets/images/Frame-19.svg" alt="leaf icon">
-                <p class="demand1-text">organic & natural</p>
-                <p class="demand1-text2">Great sourse of antioxodants. 100% vegan. NO refined sugar.</p>
-            </div>
-            <div class="demand2">
-                <img class="demand2-icon" src="/assets/images/Frame-21.svg" alt="demand2 icon">
-                <p class="demand2-text">fast deliver</p>
-                <p class="demand2-text2">Our same-day services provide reliable door-to-door delivery within hours.</p>
-            </div>
-            <div class="demand3">
-                <img class="demand3-icon" src="/assets/images/Frame-22.svg" alt="demand3 icon">
-                <p class="demand3-text">own recipes</p>
-                <p class="demand3-text2">We create recipes that taste great and provide real nutritional benefits.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section5">
-        <div class="title-container">
-            <p class="section5-tittle">tastes best</p>
-        </div>
-
         <div class="tastes-best-container">
-            <!-- <div class="product" *ngFor="let product of products; let i = index">
+
+            <div class="product" *ngFor="let product of products; let i = index">
                 <a [routerLink]="[ '/product/'+product.path,  product.id]">
                     <div class="product-lane-img" [ngStyle]="{'background-color': product.bgColor}">
                         <img [src]="product.image" alt="">
@@ -205,8 +97,8 @@
                         </div>
                     </div>
                 </a>
-            </div> -->
-            <div>
+            </div>
+            <!-- <div>
                 <div class="product1">
                     <img src="/assets/images/purple-tastes-best.png" alt="purple package">
                     <div class="lane">
@@ -223,9 +115,8 @@
                             <p class="lane-text">sale</p>
                             <p class="lane-text">sale</p>
                             <p class="lane-text">sale</p>
-                            <p class="lane-text">sale</p>
+                            <p>sale</p>
                         </div>
-
                     </div>
                 </div>
                 <div class="left-right-container">
@@ -242,7 +133,75 @@
                 </div>
             </div>
             <div>
-                <div class="product2">
+                <div class="product2-blue">
+                    <p class="almond-text">almond</p>
+                    <img src="/assets/images/product2-blue.png" alt="product 2">
+                </div>
+                <div class="left-right-container">
+                    <div class="left">
+                        <p class="description-product2">Almond- 100g</p>
+                        <p class="price-product2">$15,00</p>
+                    </div>
+                    <div class="right">
+                        <button class="right-btn-buy">Buy</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="product3-white">
+                    <img src="/assets/images/product2-white.png" alt="product 3">
+                    <div class="lane">
+                        <div class="line-text-container">
+                            <p class="lane-text">new</p>
+                            <p class="lane-text">new</p>
+                            <p class="lane-text">new</p>
+                            <p class="lane-text">new</p>
+                            <p class="lane-text">new</p>
+                            <p class="lane-text">new</p>
+
+                            <p class="lane-text">new</p>
+                            <p class="lane-text">new</p>
+                            <p class="lane-text">new</p>
+                            <p class="lane-text">new</p>
+                            <p class="lane-text">new</p>
+                            <p class="lane-text">new</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-right-container">
+                    <div class="left">
+                        <p class="description-product3">oatmeal - 150g</p>
+                        <div class="price-container-product3">
+                            <p class="price-product3-white">$15,00</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <button class="right-btn-buy">Buy</button>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <!-- 
+        <div class="tastes-best-container">
+            <div>
+                <div class="product1-pink">
+                    <p class="betal-text">Betel</p>
+                    <img src="/assets/images/product1-pink.png" alt="purple package">
+                </div>
+                <div class="left-right-container">
+                    <div class="left">
+                        <p class="description-product1">Betel - 100g</p>
+                        <div class="pricing-container">
+                            <p class="price-product1-pink">$15,00</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <button class="right-btn-buy">Buy</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="product2-grey">
                     <img src="/assets/images/product2-white.png" alt="product 2">
                 </div>
                 <div class="left-right-container">
@@ -278,7 +237,7 @@
                 </div>
                 <div class="left-right-container">
                     <div class="left">
-                        <p class="description-product3">BEETROOT - 200g</p>
+                        <p class="description-product3">RAGI - 100g</p>
                         <div class="price-container-product3">
                             <p class="price-product3">$15,00</p>
                             <p class="old-price-product3">$25,00</p>
@@ -289,46 +248,49 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
 
-    <section class="section6">
+    <section class="section3">
+        <h2 class="section3-title">you may like</h2>
         <div class="left-right-container">
-            <div class="left">
-                <img src="/assets/images/background-seciton6.png" alt="section6 background">
+            <div class="left-container">
+                <div class="left">
+                </div>
+                <p class="left-text1">cookies</p>
             </div>
+            <div class="right-container">
+                <div class="right"></div>
+                <p class="right-text">didshes</p>
+            </div>
+        </div>
+        <div class="left-right-container2">
+            <div class="left"></div>
             <div class="right">
-                <p class="right-tittle">TASTE THE GOODNESS</p>
-                <p class="p-right">To make healthy lifestyle attainable, we bring to you snacks that are made with pure,
+                <h3 class="right2-title">coooookies</h3>
+                <p class="text1">To make healthy lifestyle attainable, we bring to you snacks that are made with pure,
                     power-packed and authentic ingredients like Kale, Quinoa and super-grains like Oats and Ragi.</p>
-                <p class="p2-right">Our products are made sans artificial flavourings, preservatives, gluten, MSG, and
+                <p class="text2">Our products are made sans artificial flavourings, preservatives, gluten, MSG, and
                     guilt which makes it easier for you to binge on it all day without having to worry about your
                     health.</p>
             </div>
         </div>
-    </section>
-
-    <section class="section7">
-        <div class="product-type-container">
-            <div class="product-type">/organic/</div>
-            <div class="product-type">natural/</div>
-            <div class="product-type">healthy/</div>
-            <div class="product-type">tasty/</div>
-            <div class="product-type">handmade/</div>
-            <div class="product-type">cookies/</div>
-
-            <div class="product-type">organic/</div>
-            <div class="product-type">natural/</div>
-            <div class="product-type">healthy/</div>
-            <div class="product-type">tasty/</div>
-            <div class="product-type">handmade/</div>
-            <div class="product-type">cookies/</div>
+        <div class="left-right-container3">
+            <div class="left">
+                <h3 class="left3-title">it’s only start</h3>
+                <p class="text1">To make healthy lifestyle attainable, we bring to you snacks that are made with pure,
+                    power-packed and authentic ingredients like Kale, Quinoa and super-grains like Oats and Ragi.</p>
+                <p class="text2">Our products are made sans artificial flavourings, preservatives, gluten, MSG, and
+                    guilt which makes it easier for you to binge on it all day without having to worry about your
+                    health.</p>
+            </div>
+            <div class="right"></div>
         </div>
     </section>
 
     <footer>
         <div class="nda-container">
-            <img src="/assets/images/NDA.svg" alt="NDA-icon">
+            <img src="/assets/images/NDA-white.svg" alt="NDA-icon">
         </div>
 
         <div class="right-footer">
@@ -352,4 +314,5 @@
             </div>
         </div>
     </footer>
+
 </div>

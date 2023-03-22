@@ -1,0 +1,156 @@
+<div class="main-container">
+    <header>
+        <div class="nda-container">
+            <img src="/assets/images/NDA.svg" alt="NDA-icon">
+        </div>
+        <p class="log-out-btn">Log out</p>
+    </header>
+    <div class="auth" *ngIf="!showAdminPanel" >
+        <label for="input-password">Enter the Password</label>
+        <input type="text" id="input-password" (keydown.enter)="login()">
+        <p class="incorect-pass-text" *ngIf="showPassIncorect">Incorect password !</p>
+    </div>
+    <section class="section1" *ngIf="showAdminPanel">
+        <button class="btn-add" (click)="showAddProduct()">Add New</button>
+        <div class="add-product-container" *ngIf="showAddProductVariable">
+            <div class="input1">
+                <p class="name-text">Name</p>
+                <input type="text" class="name-input">
+            </div>
+
+            <div class="input-path">
+                <p class="name-text">Path</p>
+                <input type="text" class="path-input">
+            </div>
+
+            <div class="input2">
+                <p class="weight">weight</p>
+                <input type="text" class="weight-input">
+            </div>
+
+            <div class="input3">
+                <p class="price-text">price</p>
+                <input type="text" class="price-input">
+            </div>
+
+            <div class="input4">
+                <p class="oldPrice-text">old price</p>
+                <input type="text" class="oldPrice-input">
+            </div>
+
+            <div class="input5">
+                <p class="bgColor1-text">background color 1</p>
+                <input type="text" class="bgColor1-input">
+            </div>
+
+            <div class="input6">
+                <p class="bgColor2-text">background color 2</p>
+                <input type="text" class="bgColor2-input">
+            </div>
+
+            <div class="input7">
+                <p class="bgColor-text">background color</p>
+                <input type="text" class="bgColor-input">
+            </div>
+
+            <div class="input8">
+                <p class="upload-image-text">Upload image</p>
+                <input type="file" class="upload-image-input" (change)="upload($event)">
+                <p class="success-text" *ngIf="showText">image successfully uploaded</p>
+            </div>
+
+            <div class="input9">
+                <div class="left">
+                    <p class="laneSale-text">lane sale</p>
+                    <input type="radio" class="laneSale-checkbox" name="checkbox">
+                </div>
+                <div class="right">
+                    <p class="laneNew-text">lane new</p>
+                    <input type="radio" class="laneNew-checkbox" name="checkbox">
+                </div>
+            </div>
+
+            <div class="input-checkbox">
+                <div class="low-calories">
+                <label for="low-calories">Low Calories</label>
+                <input type="checkbox" id="low-calories">
+            </div>
+            <div class="zero-sugar">
+                <label for="zero-sugar">Zero Sugar</label>
+                <input type="checkbox" id="zero-sugar">
+            </div>
+            <div class="all-natural">
+                <label for="all-natural">All Natural</label>
+                <input type="checkbox" id="all-natural">
+            </div>
+            </div>
+            <div class="input-category">
+                <label for="select">Choose category</label>
+                <select id="select">
+                    <option disabled>choose category</option>
+                    <option value="cookie">cookie</option>
+                    <option value="candy">candy</option>
+                    <option value="tastes-best">tastes best</option>
+                </select>
+            </div>
+            <div class="input-title">
+                <p class="description-text">Title</p>
+                <input type="text" class="title-input">
+            </div>
+
+
+            <div class="input10">
+                <p class="description-text">description</p>
+                <input type="text" class="description-input">
+            </div>
+
+            <input type="button" class="sumbit-btn" value="Add product" (click)="addProduct()" *ngIf="!showEditBtn">
+            <input type="button" class="edit-btn" value="Edit product" (click)="saveEdit()" *ngIf="showEditBtn">
+        </div>
+
+        <table>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>weight</th>
+                <th>price</th>
+                <th>old price</th>
+                <th>bg color 1</th>
+                <th>bg color 2</th>
+                <th>bg color</th>
+                <th>image</th>
+                <th>lane sale</th>
+                <th>lane new</th>
+                <th>low calories</th>
+                <th>Zero Sugar</th>
+                <th>All Natural</th>
+                <th>added</th>
+                <th>title</th>
+                <th>description</th>
+                <th>action</th>
+            </tr>
+            <tr *ngFor="let product of products; let i = index;">
+
+                <!-- product.title.length > 10 ? product.title.slice(0,10)+'...' : product.title -->
+                <td>{{product.id.length >= 15 ? product.id.slice(0, 15)+'...' : product.id}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.weight}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.oldPrice}}</td>
+                <td>{{product.bcColorTop}}</td>
+                <td>{{product.bcColorBottom}}</td>
+                <td>{{product.bgColor}}</td>
+                <td><img class="img" [src]="product.image" alt=""></td>
+                <td>{{product.laneSale}}</td>
+                <td>{{product.laneNew}}</td>
+                <td>{{product.lowCalories}}</td>
+                <td>{{product.zeroSugar}}</td>
+                <td>{{product.allNatural}}</td>
+                <td>{{product.added}}</td>
+                <td>{{product.title.length > 10 ? product.title.slice(0,10)+'...' : product.title}}</td>
+                <td>{{product.description.length > 10 ? product.description.slice(0,10)+'...' : product.description}}</td>
+                <td class="action-td"><button class="edit-btn" (click)="edit(product.id)">Edit</button><button class="add-btn" (click)="delete(product.id)">Delete</button></td>
+            </tr>
+        </table>
+    </section>
+</div>
